@@ -1,5 +1,5 @@
 {{define "head"}}
-<title>Sign up &mdash; {{.SiteName}}</title>
+<title>Aliĝu &mdash; {{.SiteName}}</title>
 
 <style type="text/css">
 h2 {
@@ -74,22 +74,22 @@ form dd {
 				<input type="hidden" name="invite_code" value="{{.Invite}}" />
 				<dl class="billing">
 					<label>
-						<dt>Username</dt>
+						<dt>Uzantnomo</dt>
 						<dd>
 							<input type="text" id="alias" name="alias" style="width: 100%; box-sizing: border-box;" tabindex="1" autofocus />
-							{{if .Federation}}<p id="alias-site" class="demo">@<strong>your-username</strong>@{{.FriendlyHost}}</p>{{else}}<p id="alias-site" class="demo">{{.FriendlyHost}}/<strong>your-username</strong></p>{{end}}
+							{{if .Federation}}<p id="alias-site" class="demo">@<strong>via-uzantnomo</strong>@{{.FriendlyHost}}</p>{{else}}<p id="alias-site" class="demo">{{.FriendlyHost}}/<strong>via-uzantnomo</strong></p>{{end}}
 						</dd>
 					</label>
 					<label>
-						<dt>Password</dt>
+						<dt>Pasvorto</dt>
 						<dd><input type="password" id="password" name="pass" autocomplete="new-password" placeholder="" tabindex="2" style="width: 100%; box-sizing: border-box;" /></dd>
 					</label>
 					<label>
-						<dt>Email (optional)</dt>
-						<dd><input type="email" name="email" id="email" style="letter-spacing: 1px; width: 100%; box-sizing: border-box;" placeholder="me@example.com" tabindex="3" /></dd>
+						<dt>Retpoŝto (nedevige)</dt>
+						<dd><input type="email" name="email" id="email" style="letter-spacing: 1px; width: 100%; box-sizing: border-box;" placeholder="mi@example.com" tabindex="3" /></dd>
 					</label>
 					<dt>
-						<button id="btn-create" type="submit" style="margin-top: 0">Create blog</button>
+						<button id="btn-create" type="submit" style="margin-top: 0">Krei blogon</button>
 					</dt>
 				</dl>
 			</form>
@@ -164,7 +164,7 @@ var doneTyping = function() {
 		http.send(JSON.stringify(params));
 	} else {
 		$aliasSite.className += ' demo';
-		$aliasSite.innerHTML = '{{ if .Federation }}@<strong>your-username</strong>@{{.FriendlyHost}}{{ else }}{{.FriendlyHost}}/<strong>your-username</strong>/{{ end }}';
+		$aliasSite.innerHTML = '{{ if .Federation }}@<strong>via-uzantnomo</strong>@{{.FriendlyHost}}{{ else }}{{.FriendlyHost}}/<strong>via-uzantnomo</strong>/{{ end }}';
 	}
 };
 $alias.on('keyup input', function() {

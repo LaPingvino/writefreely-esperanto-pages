@@ -184,8 +184,8 @@ var doneTyping = function() {
 		}
 		http.send(JSON.stringify(params));
 	} else {
-		$aliasSite.className += ' demo';
-		$aliasSite.innerHTML = '{{ if .Federation }}@<strong>your-username</strong>@{{.FriendlyHost}}{{ else }}{{.FriendlyHost}}/<strong>your-username</strong>/{{ end }}';
+		$aliasSite.className += ' demonstracio';
+		$aliasSite.innerHTML = '{{ if .Federation }}@<strong>via-uzantnomo</strong>@{{.FriendlyHost}}{{ else }}{{.FriendlyHost}}/<strong>via-uzantnomo</strong>/{{ end }}';
 	}
 };
 $alias.on('keyup input', function() {
