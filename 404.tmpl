@@ -1,10 +1,10 @@
 {{define "head"}}<title>Post not found &mdash; {{.SiteName}}</title>{{end}}
 {{define "content"}}
 		<div class="error-page" style="max-width:30em">
-			<p class="msg">Post not found.</p>
+			<p class="msg">Afiŝo ne trovita.</p>
 			{{if and (not .SingleUser) .OpenRegistration}}
-			<p class="commentary" style="margin-top:2.5em">Why not share a thought of your own?</p>
-			<p><a href="/">Start a blog</a> and spread your ideas on <strong>{{.SiteName}}</strong>, a simple{{if .Federation}}, federated{{end}} blogging community.</p>
+			<p class="commentary" style="margin-top:2.5em">Kial ne mem dividi unu el viaj pensoj?</p>
+			<p><a href="/">Komencu blogon</a> kaj disvastigu viajn ideojn en <strong>{{.SiteName}}</strong>, simpla{{if .Federation}}, federaciita{{end}} bloga komunumo.</p>
 			{{end}}
 		</div>
 {{end}}
