@@ -184,7 +184,7 @@ var doneTyping = function() {
 		}
 		http.send(JSON.stringify(params));
 	} else {
-		$aliasSite.className += ' demonstracio';
+		$aliasSite.className += ' demo';
 		$aliasSite.innerHTML = '{{ if .Federation }}@<strong>via-uzantnomo</strong>@{{.FriendlyHost}}{{ else }}{{.FriendlyHost}}/<strong>via-uzantnomo</strong>/{{ end }}';
 	}
 };
